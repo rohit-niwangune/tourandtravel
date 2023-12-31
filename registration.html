@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+  <!-- <title>Popup Login Form Design | CodingNepal</title> -->
+  <link rel="stylesheet" href="registration.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+  body{
+  background-image: url('https://living.qa.acg.aaa.com/content/dam/aaa-living/auto/Why-You-Should-Rent-a-Car-for-Vacation/rent-a-car-vacation-hero-1.gif');
+  background-repeat:repeat;
+  background-size: cover;
+  
+}
+</style>
+
+<body>
+<div class="header" style="text-align: center; background-color:skyblue; padding: 20px; position: static;">Welcome, To Take a Trip !</div>
+  
+    <div class="container">
+      <label for="show" class="close-btn fas fa-times" title="close"></label>
+      <div class="text">Registration</div>
+      <form action="registration.php" method="post">
+        <div class="data">
+          <label>Email </label>
+          <input type="text" name="email" required pattern="[a-zA-Z0-9._%+-]+@gamil\.com"  windows.alert="Put proper"/>
+        </div>
+        <div class="data">
+          <label> Phone</label>
+          <input type="text" pattern="[0-9]{10}" name="phone" required/>
+        </div>
+        <div class="data">
+          <label> Password</label>
+          <input type="password" name="pass" required/>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="C" name="C" value="C" required />
+          <label>please agree terms</label>
+        </div>
+
+        <div class="btn">
+          <div class="inner"></div>
+          <button type="submit">
+            <div class="signup-container">
+              Register
+          </button>
+        </div>
+
+    </div>
+
+
+    </div>
+  </div>
+  </form>
+  </div>
+</body>
+
+</html>

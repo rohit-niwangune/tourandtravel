@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.show-btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  transition: .1s ease;
+
+}
+
+.show-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.show-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: blue;
+  transition: .5s ease;
+}
+
+.show-btn:hover {
+  color: skyblue;
+  transition-delay: .5s;
+}
+
+.show-btn:hover::before {
+  width: 100%;
+}
+
+.show-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: skyblue;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.show-btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.container {
+  display: none;
+  background: #ebf2f4;
+  width: 410px;
+  padding: 30px;
+  box-shadow: 2 7 8px rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  margin-top: 20%;
+
+
+}
+
+#show:checked~.container {
+  display: block;
+}
+
+.container .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container .close-btn:hover {
+  color: #3498db;
+}
+
+.container .text {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container form {
+  margin-top: -20px;
+}
+
+.container form .data {
+  height: 45px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+form .data label {
+  font-size: 18px;
+}
+
+form .data input {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid silver;
+}
+
+form .data input:focus {
+  border-color: black;
+  border-bottom-width: 2px;
+}
+
+form .forgot-pass {
+  margin-top: -8px;
+}
+
+form .forgot-pass a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+form .btn {
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+form .btn .inner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(right,
+      #56d8e4,
+      #9f01ea,
+      #56d8e4,
+      #9f01ea);
+  transition: all 0.4s;
+}
+
+form .btn:hover .inner {
+  left: 0;
+}
+
+form .btn button {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+form .signup-link {
+  text-align: center;
+}
+
+form .signup-link a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+.nav-bar {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 90px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px lightslategray;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+
+ul.menu {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu li {
+  flex: 1;
+  list-style-type: none;
+  font-size: 16px;
+  font-family: "Barlow Condensed";
+  text-align: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.menu li a:hover {
+  color: midnightblue;
+  text-decoration: underline;
+}
+
+.expansion-button {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: skyblue;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 2;
+}
+
+.sidebar.visible {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+
+}
+
+.sidebar-back-button {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar-back-button-icon {
+  font-size: 25px;
+  float: left;
+  margin-right: 5px;
+
+}
+
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #ddd;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-button:hover {
+  background-color: #ccc;
+}
+
+.sidebar-content {
+  padding-top: 15px;
+  display: inline-block;
+}
+
+.imglogo {
+  position: absolute;
+  margin-right: 56%;
+  margin-top: 1%;
+
+}
+
+.imglogo img {
+  width: 175px;
+  height: 90pxpx;
+}
+
+.logo {
+  position: relative;
+  color: white;
+  left: 10%;
+  top: 1%;
+  font-size: 40px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.card-container {
+  display: inline-block;
+  margin-top: 50%;
+}
+
+
+
+
+
+
+
+
+buttons .loginButton {
+  background-color: transparent;
+  border: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 6%;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider {
+  width: 100%;
+  height: 100%
+}
+
+.slider-image {
+ margin-top: -3%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+@keyframes slides {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-100%);
+  }
+
+  40% {
+    transform: translateX(-200%);
+  }
+
+  60% {
+    transform: translateX(-300%);
+  }
+
+  80% {
+    transform: translateX(-400%);
+  }
+
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+.nav-bar {
+  position: fixed;
+  background-color: black;
+  color: black;
+}
+
+.places-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.places-text small {
+  font-family: Roboto;
+  color: red;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.places-text h2 {
+  font-family: Barlow Condensed;
+  font-size: 55px;
+  color: #191d34;
+  letter-spacing: 1px;
+}
+
+.cards {
+  display: flex;
+  /* Use flexbox to align cards in a single row */
+  justify-content: space-between;
+  /* Distribute space between cards */
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  /* Allow cards to wrap to the next row if needed */
+}
+
+.card {
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: calc(28.33% - 20px);
+  /* Adjust the width of each card */
+  margin-bottom: 20px;
+  /* Add some space between cards */
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  /* Set a fixed width for the image */
+  height: auto;
+  /* Allow the height to adjust proportionally */
+  max-height: 300px;
+  /* You can set a maximum height if needed */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cards .text {
+  font-family: Barlow Condensed;
+  line-height: 50px;
+}
+
+.cards .card-box {
+  display: flex;
+  flex-flow: row;
+  background-color: red;
+  font-size: 18px;
+  font-family: Roboto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cards .time {
+  flex: 1;
+}
+
+.cards .location {
+  flex: 2;
+}
+
+.cards .cost {
+  color: #4cafad;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.places {
+  position: relative;
+  margin-top: 54%;
+}
+
+/* Zoom in Photos */
+.zoom-img {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.zoom-img .img-card {
+  position: absolute;
+  overflow: hidden;
+}
+
+.img-card img {
+  transition: 0.5s ease;
+}
+
+.card:hover .zoom-img img {
+  transform: scale(1.1);
+}
+
+
+.about {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 150px;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 500px;
+  height: 700px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  flex: 1;
+  /*width: 100px;*/
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.about-text small,
+.about-text p,
+.about-text input,
+.about-text a {
+  flex: 1;
+  font-family: Roboto;
+}
+
+.about-text small {
+  color:red;
+  font-size: 18px;
+}
+
+.about-text h2 {
+  flex: 1;
+  font-family: Barlow Condensed;
+  font-size: 60px;
+  color: #191d34;
+  width: 450px;
+}
+
+.about-text label {
+  padding-bottom: 10px;
+  color: #506172;
+  font-weight: bolder;
+  font-family: Roboto;
+  letter-spacing: 1px;
+}
+
+.about-text p {
+  width: 500px;
+  line-height: 30px;
+  color: #506172;
+  font-weight: bolder;
+  padding: 50px 0;
+}
+
+.about-text a {
+  background-color: #fff;
+  border: 2px solid #014b85;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 180px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  color: #014b85;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.about-text a:hover {
+  background-color: #014b85;
+  color: #fff;
+}
+
+/*===============Footer===================*/
+.footer {
+  background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293781/pine-tree_mq2sgp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 670px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 36, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.footer .links {
+  position: relative;
+  color: #fff;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.links ul {
+  list-style-type: none;
+}
+
+.links h3 {
+  font-family: Barlow Condensed;
+  font-weight: normal;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.links li {
+  font-family: Roboto;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.links li:hover {
+  color: red;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+  <header>
+    <ul class="menu">
+      <section class="nav-bar">
+        <div class="logo">Take a Trip !</div>
+        <div class="imglogo">
+          <img src="images/logo2.png" alt="logo">
+        </div>
+        <div class="center">
+          <input type="checkbox" id="show" />
+          <label for="show" class="show-btn" style="color: white;">LogIn / Register</label>
+          <div class="container">
+            <label for="show" class="close-btn fas fa-times" title="close"></label>
+            <div class="text">Login Form</div>
+            <form action="login.php" method="post">
+              <div class="data">
+                <label>Email or Phone</label>
+                <input type="text" class="Email" name="email" required/>
+              </div>
+              <div class="data">
+                <label>Password</label>
+                <input type="password" class="password" name="pass" required/>
+              </div>
+              <div class="forgot-pass">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <div class="btn">
+                <div class="inner"></div>
+                <button type="submit">
+                  <div class="signup-container">
+                    <a class="signup-container" >login</a>
+                  </div>
+                </button>
+              </div>
+              <div class="signup-link">
+                Not a member? <a href="registration.html">Registration</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </ul>
+  </header>
+
+  <h2 class="w3-center"></h2>
+
+  <div class="slider-container">
+    <div class="slider">
+      <img class="slider-image active" src="images/ertiga.jpeg" alt="Slider Image 1">
+      <img class="slider-image" src="images/final2.jpg" alt="Slider Image 2">
+      <img class="slider-image" src="images/rohit.jpg" alt="Slider Image 3">
+      <img class="slider-image" src="images/final.jpg" alt="Slider Image 4">
+    </div>
+  </div>
+
+  <section class="places">
+    <div class="places-text">
+      <h2>Most Preferred Packages</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="zoom-img">
+          <div class="img-card">
+            <img src="images/ertiga.jpeg">
+          </div>
+        </div>
+
+        <div class="text">
+          <span class="rating">⭐⭐⭐⭐⭐</span>
+          <h2>For Family & Friends <br>(7 seater)</h2>
+          <p class="cost">Out Of Station+Including toll</p>
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="zoom-img">
+          <div class="img-card">
+            <img src="images/swift.jpeg">
+          </div>
+        </div>
+
+        <div class="text">
+          <span class="rating">⭐⭐⭐⭐⭐</span>
+          <h2>In Between State<br>(4 seater)</h2>
+          <p class="cost">Rental + Waiting charges</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="zoom-img">
+          <div class="img-card">
+            <img src="images/final2.jpg">
+          </div>
+        </div>
+
+        <div class="text">
+          <span class="rating">⭐⭐⭐⭐⭐</span>
+          <h2>Local Area<br>(4 seater)</h2>
+          <p class="cost">Daily Rides</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--===========Footer=================-->
+  <div class="footer">
+    <div class="links">
+      <h3>Quick Links</h3>
+      <ul>
+        <a href="index.html" style="text-decoration: none; color: white;" > <i class="fas fa-angle-right"></i> Home</a><br><br>
+        <a href="packages.html" style="text-decoration: none; color: white;"> <i class="fas fa-angle-right"></i> Packages</a><br><br>
+        <a href="about.html" style="text-decoration: none; color: white;"> <i class="fas fa-angle-right"></i> About</a><br><br>
+        <a href="about.html" style="text-decoration: none; color: white;"> <i class="fas fa-angle-right"></i> Contact</a><br><br>
+
+    </div>
+    <div class="links">
+      <h3>Contact Info</h3>
+      <a style="text-decoration: none; color: white;"> <i class="fas fa-angle-right"></i> LOGIN</a><br>
+      <p> <i class="fas fa-phone"></i> 9180 60 8080 </p><br>
+      <p> <i class="fas fa-phone"></i> 9680 80 8080 </p><br>
+      <p> <i class="fas fa-envelope"></i>takeatrip@gmail.com</p>
+    </div>
+    <div class="links">
+      <h3>Support</h3>
+      <ul>
+        <li>Frequently Asked Questions</li>
+        <li>Report a Payment Issue</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

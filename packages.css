@@ -1,0 +1,191 @@
+/* Style the header */
+.head p {
+  background-color: skyblue;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+}
+
+/* Style the button container */
+.btn-container {
+  background-color: black;
+  width: 50%;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style the buttons */
+.btn-container button {
+  background-color: skyblue;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-container button:hover {
+  background-color: #3498db;
+  /* Darker shade of blue on hover */
+}
+
+/* Style the containers */
+.container1,
+.container2,
+.container3 {
+  background-color: #f0f0f0;
+  /* Light gray background */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Style the headings inside containers */
+.container1 h2,
+.container2 h2,
+.container3 h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style the paragraphs inside containers */
+.container1 p,
+.container2 p,
+.container3 p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style the horizontal rules inside containers */
+.container1 hr,
+.container2 hr,
+.container3 hr {
+  border: none;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0;
+}
+
+/* Set background image for the entire webpage */
+body {
+  background-image: url('rohit.jpg');
+  background-size: cover;
+  /* Ensures the image covers the entire viewport */
+  background-repeat: no-repeat;
+  /* Prevents image from repeating */
+  background-attachment: fixed;
+  /* Keeps the background fixed while scrolling */
+  background-position: center center;
+  /* Centers the background image */
+}
+
+/* Style the icon inside the container */
+/* Style the icon inside the container */
+.container1 p {
+  position: relative;
+}
+
+.container1 i {
+  position: absolute;
+  left: 10px;
+  /* Adjust this value to move the icon to the desired position */
+  top: 50%;
+  /* Vertically align the icon to the middle of the text */
+  transform: translateY(-50%);
+  /* Center the icon vertically */
+}
+
+/* Style for container2 */
+.container2 {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Style the headings inside container2 */
+.container2 h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style the paragraphs inside container2 */
+.container2 p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style the horizontal rules inside container2 */
+.container2 hr {
+  border: none;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0;
+}
+
+/* Style the icon inside container2 */
+.container2 p {
+  position: relative;
+}
+
+.container2 i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container3 {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Style the headings inside container2 */
+.container3 h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style the paragraphs inside container2 */
+.container3 p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style the horizontal rules inside container2 */
+.container3 hr {
+  border: none;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0;
+}
+
+/* Style the icon inside container2 */
+.container3 p {
+  position: relative;
+}
+
+.container3 i {
+  position: absolute;
+  left:10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ 
+ 
